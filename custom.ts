@@ -106,7 +106,7 @@ namespace DSP_I2C16x8
     //% weight=8
     //% block="Setup DSP I2C Addr $addr"
 
-    export function Init_I2C_Addr(addr:number)
+    export function Init_I2C_Addr(addr:number):void
     {   
         _addr = addr ;
 
@@ -350,6 +350,27 @@ namespace DSP_I2C16x8
  }
 
 
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++                                                                     ++
+  ++              Function:Printer Number                                ++
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++                                                                     ++
+  ++       Input :                                                       ++
+  ++                  num = Decimal Number 0-9  ไม่เกิน 8 หลัก              ++
+  ++                                                                     ++
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+ //% weight=3 
+ //% block="Print Number %num" blockGap=8
+ 
+    export function PrintNumber(num:number):void 
+    {
+      PrintTxt(Math.roundWithPrecision(num,2).toString()) ;
+    }
+
+
+
  /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
    ++                    Function:Print String                           ++
    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -422,26 +443,6 @@ namespace DSP_I2C16x8
 }//void
 
  
-
-
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                                                                     ++
-  ++              Function:Printer Number                                ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                                                                     ++
-  ++       Input :                                                       ++
-  ++                  num = Decimal Number 0-9  ไม่เกิน 8 หลัก              ++
-  ++                                                                     ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
- //% weight=3 
- //% block="Print Number %num" blockGap=8
- 
-    export function PrintNumber(num: number) 
-    {
-      PrintTxt(Math.roundWithPrecision(num,2).toString());
-    }
-
 
 
 /********************************************************
