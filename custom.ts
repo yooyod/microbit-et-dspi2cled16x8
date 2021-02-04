@@ -362,13 +362,12 @@ namespace DSP_I2C16x8
   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
  //% weight=3 
- //% block="Print Number $nmb" 
- //blockGap=8
+ //% block="Print Number $nmb" blockGap=8
  
     export function PrintNumber(nmb:number):void 
     {
        
-      PrintTxt(Math.roundWithPrecision(nmb,2).toString()) ;
+      //PrintTxt(Math.roundWithPrecision(nmb,2).toString()) ;
     
     }
 
@@ -393,10 +392,7 @@ namespace DSP_I2C16x8
         let i,num,k,cr ;
 
         num = txt.length           ;    //Read Leng of String
- 
-      
-       
-    
+   
         if(num ==1)
         {
             Clr_dtbuf(0)           ;    // Clear data Buffer All
