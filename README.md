@@ -1,6 +1,34 @@
 
 > Open this page at [https://yooyod.github.io/microbit-et-dspi2cled16x8/](https://yooyod.github.io/microbit-et-dspi2cled16x8/)
 
+
+## Usage
+```blocks
+DSP_I2C16x8.Init_I2C_Addr(112)
+DSP_I2C16x8.Dimmer(15)
+DSP_I2C16x8.DSP_OnOFF(DSP_I2C16x8.DSP_Status.ON)
+DSP_I2C16x8.Blink_OnOFF(DSP_I2C16x8.DSP_Blink.OFF)
+DSP_I2C16x8.Clr_DSP()
+basic.forever(function () {
+    DSP_I2C16x8.PrintNumber(0)
+    DSP_I2C16x8.PrintTxt("Hi!ETT")
+    DSP_I2C16x8.PrintArrow(DSP_I2C16x8.Pr_Arrow.UP)
+})
+
+```
+
+## Example
+### Demo ET-DSP I2C LED 16x8 by I2C Address=112 defaule . Display Text,Arrow Shift Left and Fix number .
+``` blocks 
+DSP_I2C16x8.Init_I2C_Addr(112)
+basic.forever(function () {
+    DSP_I2C16x8.PrintTxt("Hi!ETT")
+    DSP_I2C16x8.PrintArrow(DSP_I2C16x8.Pr_Arrow.ScrL)
+    DSP_I2C16x8.PrintNumber(15)
+})
+
+```
+
 ## Use as Extension
 
 This repository can be added as an **extension** in MakeCode.
