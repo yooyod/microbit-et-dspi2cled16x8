@@ -105,6 +105,7 @@ namespace DSP_I2C16x8
 
     //% weight=8
     //% block="Setup DSP I2C Addr $addr"
+    //% addr.defl= 112 
 
     export function Init_I2C_Addr(addr:number):void
     {   
