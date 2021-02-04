@@ -4,7 +4,7 @@
 
 ## Usage
 
-### DSPI2C16x8
+### DSP I2C 16x8
 
 ```blocks
 DSP_I2C16x8.Init_I2C_Addr(112)
@@ -16,7 +16,7 @@ DSP_I2C16x8.Clr_DSP()
 basic.forever(function () {
 DSP_I2C16x8.PrintNumber(0)
 DSP_I2C16x8.PrintTxt("Hi!ETT")
-DSP_I2C16x8.PrintArrow(DSP_I2C16x8.Pr_Arrow.UP)
+
 })
 ```
 
