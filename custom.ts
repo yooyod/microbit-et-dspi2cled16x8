@@ -437,7 +437,7 @@ namespace DSP_I2C16x8
  //% weight=3 
  //% block="Print Number %num" blockGap=8
  
-    export function PrintNumber(num: number) :void
+    export function PrintNumber(num: number) 
     {
       PrintTxt(Math.roundWithPrecision(num,2).toString());
     }
