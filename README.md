@@ -3,7 +3,8 @@
 
 
 ## Usage
-### DSP I2C 16x8
+
+### DSPI2C16x8
 
 ```blocks
 DSP_I2C16x8.Init_I2C_Addr(112)
