@@ -366,7 +366,11 @@ namespace DSP_I2C16x8
  
     export function PrintNumber(num:number):void 
     {
-      PrintTxt(Math.roundWithPrecision(num,2).toString()) ;
+        let nbr :string 
+      //PrintTxt(Math.roundWithPrecision(num,2).toString()) ;
+      Math.roundWithPrecision(num,2).toString() ;
+      PrintTxt(nbr)   ;
+
     }
 
 
