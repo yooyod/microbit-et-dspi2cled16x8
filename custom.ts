@@ -104,7 +104,7 @@ namespace DSP_I2C16x8
   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
     //% weight=8
-    //% block="Setup DSP I2C Addr %addr"
+    //% block="Setup DSP I2C Addr $addr"
 
     export function Init_I2C_Addr(addr:number)
     {   
@@ -180,7 +180,7 @@ namespace DSP_I2C16x8
   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
     //% weight=5
-    //% block="DSP Brightness[0-15]: %val"
+    //% block="DSP Brightness[0-15]: $val"
 
     export function Dimmer(val:number)
     {   
@@ -279,7 +279,7 @@ namespace DSP_I2C16x8
   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
  //% weight=3 
- //% block="Print Number %number" blockGap=8
+ //% block="Print Number $number" blockGap=8
  
     export function PrintNumber(num: number) 
     {
@@ -381,7 +381,7 @@ namespace DSP_I2C16x8
    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
  //% weight=2 
- //% block="Print Text %txt" 
+ //% block="Print Text $txt" 
  //% txt.defl="Hi!ETT" 
 
     export function PrintTxt(txt:string):void
