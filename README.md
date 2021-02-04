@@ -12,12 +12,11 @@ DSP_I2C16x8.Dimmer(15)
 DSP_I2C16x8.DSP_OnOFF(DSP_I2C16x8.DSP_Status.ON)
 DSP_I2C16x8.Blink_OnOFF(DSP_I2C16x8.DSP_Blink.OFF)
 DSP_I2C16x8.Clr_DSP()
-DSP_I2C16x8.PrintNumber(5)
+DSP_I2C16x8.PrintNumbe(7)
 
 basic.forever(function () {
-
 DSP_I2C16x8.PrintTxt("Hi!ETT")
-DSP_I2C16x8.PrintNumber(0)
+DSP_I2C16x8.PrintNumbe(0)
 DSP_I2C16x8.PrintArrow(DSP_I2C16x8.Pr_Arrow.UP)
 })
 ```
@@ -32,7 +31,7 @@ DSP_I2C16x8.Init_I2C_Addr(112)
 basic.forever(function () {
 DSP_I2C16x8.PrintTxt("Hi!ETT")
 DSP_I2C16x8.PrintArrow(DSP_I2C16x8.Pr_Arrow.ScrL)
-DSP_I2C16x8.PrintNumber(15)
+DSP_I2C16x8.PrintNumbe(15)
 })
 ```
 

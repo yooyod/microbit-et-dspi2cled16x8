@@ -347,7 +347,7 @@ namespace DSP_I2C16x8
             
         }
 
- }
+    }
 
 
 
@@ -363,8 +363,9 @@ namespace DSP_I2C16x8
 
  //% weight=3 
  //% block="Print Number $nmb" blockGap=8
- 
-    export function PrintNumber(nmb:number):void 
+ //% nmb.defl= 5 
+
+    export function PrintNumbe(nmb:number):void 
     {
        
       //PrintTxt(Math.roundWithPrecision(nmb,2).toString()) ;
