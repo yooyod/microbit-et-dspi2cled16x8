@@ -270,26 +270,6 @@ namespace DSP_I2C16x8
 
 /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   ++                                                                     ++
-  ++              Function:Printer Number                                ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                                                                     ++
-  ++       Input :                                                       ++
-  ++                  num = Decimal Number 0-9  ไม่เกิน 8 หลัก              ++
-  ++                                                                     ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-
- //% weight=3 
- //% block="Print Number $num" blockGap=8
- 
-    export function PrintNumber(num: number) :void
-    {
-      PrintTxt(Math.roundWithPrecision(num,2).toString());
-    }
-
-
-
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                                                                     ++
   ++          Function:Plot Text Ascii 1 Charecter to Buffer             ++
   +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   ++                                                                     ++
@@ -442,6 +422,27 @@ namespace DSP_I2C16x8
 }//void
 
  
+
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++                                                                     ++
+  ++              Function:Printer Number                                ++
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++                                                                     ++
+  ++       Input :                                                       ++
+  ++                  num = Decimal Number 0-9  ไม่เกิน 8 หลัก              ++
+  ++                                                                     ++
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+ //% weight=3 
+ //% block="Print Number $num" blockGap=8
+ 
+    export function PrintNumber(num: number) :void
+    {
+      PrintTxt(Math.roundWithPrecision(num,2).toString());
+    }
+
+
 
 /********************************************************
  *                Function :Print Arrow                 *
