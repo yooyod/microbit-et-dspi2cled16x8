@@ -353,9 +353,8 @@ namespace DSP_I2C16x8
 
 
 /** 
- * Function:Printer Number                                
- *                                                                     
- *  Input:Decimal Number < 8 digit                 
+ * Function:Printer Number                                                                                                    
+ * Input:Decimal Number < 8 digit                 
  */
 
  //% weight=3 
@@ -371,8 +370,7 @@ namespace DSP_I2C16x8
 
 
 /** 
- *  Function:Print String
- *                           
+ *  Function:Print String                          
  *  Input: text String                                                                                                           
  */
 
@@ -438,11 +436,10 @@ namespace DSP_I2C16x8
 
 
 /**
- *  Function :Print Arrow                 
- *                  
+ *  Function :Print Arrow                                  
  *  Print an arrow on the Display LED                  
  *  input: Select Symbol arrow by drop-down list          
- *  time (milliseconds) to show the icon. Default is 600                                                     
+ *  @time (milliseconds) to show the icon. Default is 600                                                     
  */
  
     //% weight=1 blockGap=8
