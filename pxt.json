@@ -1,6 +1,6 @@
 {
     "name": "ET-DspI2cLED16x8",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "Extention ET-DSP I2C LED 16x8 ",
     "dependencies": {
         "core": "*"
