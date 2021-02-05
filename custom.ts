@@ -11,9 +11,9 @@ enum MyEnum {
     Two
 }
 
-/*******************************************************************
- **                               Custom blocks                   **
- *******************************************************************/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++                            Custom blocks                     ++
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 //% weight=125 color="#00CF00" icon="\uf2a1"    
 
@@ -95,13 +95,13 @@ namespace DSP_I2C16x8
 
   //let _dspBuf     = []
 
-/******************************************************************************************** 
- **                                           Sub CustomBox                                **
- ********************************************************************************************/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  ++                                      Sub CustomBox                                    ++
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-/**++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-   ++                    Function Initial Display                        ++
-   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+  /**
+   *  Function Initial Display                        
+   */
 
     //% weight=8
     //% block="Setup DSP I2C Addr $addr"
@@ -120,9 +120,9 @@ namespace DSP_I2C16x8
         
     }
 
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                           Function ON-OFF Display                             ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/** 
+ *   Function ON-OFF Display                             
+ */
     //% weight=7
     //% block=" DSP ON-OFF:%val"
     //% val.defl=0
@@ -143,9 +143,9 @@ namespace DSP_I2C16x8
     }
 
 
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                           Function Blink Display                            ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/**
+ * Function Blink Display    
+ */
     //% weight=6
     //% block=" DSP BLINK:%val"
     //% val.defl=0
@@ -176,9 +176,9 @@ namespace DSP_I2C16x8
         }
     }
 
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                         Function Dimmer Display                             ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/**
+ *  Function Dimmer Display                             
+ */
 
     //% weight=5
     //% block="DSP Brightness[0-15]: $val"
@@ -217,9 +217,9 @@ namespace DSP_I2C16x8
     }
 
 
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                    Function Clear display                                    ++       
-  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/**
+ * Function Clear display                                    
+ */
  
   //% weight=4
   //% block="Clear Display"
@@ -352,15 +352,11 @@ namespace DSP_I2C16x8
 
 
 
-/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                                                                     ++
-  ++              Function:Printer Number                                ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-  ++                                                                     ++
-  ++       Input :                                                       ++
-  ++                  num = Decimal Number 0-9 < 8 digit                 ++
-  ++                                                                     ++
-  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/** 
+ * Function:Printer Number                                
+ *                                                                     
+ *  Input:Decimal Number < 8 digit                 
+ */
 
  //% weight=3 
  //% block="Print Number $num" blockGap=8
@@ -374,15 +370,11 @@ namespace DSP_I2C16x8
 
 
 
- /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-   ++                    Function:Print String                           ++
-   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-   ++                                                                    ++
-   ++      Input  :                                                      ++
-   ++               txt = String                                         ++
-   ++                                                                    ++ 
-   ++                                                                    ++
-   ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/** 
+ *  Function:Print String
+ *                           
+ *  Input: text String                                                                                                           
+ */
 
  //% weight=2 
  //% block="Print Text $txt" 
@@ -445,14 +437,13 @@ namespace DSP_I2C16x8
  
 
 
-/********************************************************
- *                Function :Print Arrow                 *
- ********************************************************                    
- *  Draws an arrow on the LED screen                    *
- *  @param aw the direction of the arrow 0-10           *
- * time (milliseconds) to show the icon. Default is 600 *
- *                                                      *
- ********************************************************/
+/**
+ *  Function :Print Arrow                 
+ *                  
+ *  Print an arrow on the Display LED                  
+ *  input: Select Symbol arrow by drop-down list          
+ *  time (milliseconds) to show the icon. Default is 600                                                     
+ */
  
     //% weight=1 blockGap=8
     //% block="Print Arrow: %aw"
@@ -705,32 +696,30 @@ const Tab_Font = [   //array[94]
  ]
 
 
-/******************************************************
- *                                                    *
- *       Font 5x7(English)                            *
- *                                                    *
- ******************************************************
- * -ASCII fonts from 0x20 ~ 0x7F(DEC 32 ~ 127)        *
- *  composed of following characters                  *
- *                                                    * 
- * -XSize : 5  pixcels (Array 5byte 0-->4)            *
- * -YSize : 7  pixcels (Array 1 Byte)                 *
- *                                                    *
- *                                                    *
- *   End  ..OOOOO.. <- bit7       (y)                 *
- *    ^   ..OOOOO.. <- bit6        ^                  *
- *    |   ..OOOOO.. <- bit5        |                  *
- *    |   ..OOOOO.. <- bit4        |                  *
- *    |   ..OOOOO.. <- bit3        |                  *
- *    |   ..OOOOO.. <- bit2        |                  *
-   Start  ..OOOOO.. <- bit1       +----->(x)          *                 
- *        ..OOOOO.. <- bit0  (Blank,Not Use)          *
- *                                                    *   
- *  Byte0-----------> Byte4                           *
- *                                                    *
- *     (O = 1 Byte Array  in Table)                   *
- *     (1 Charecter = 5 byte)                         *
- ******************************************************/
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++
+ +                Font 5x7(English)                   +
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ + -ASCII fonts from 0x20 ~ 0x7F(DEC 32 ~ 127)        +
+ +  composed of following characters                  +
+ +                                                    + 
+ + -XSize : 5  pixcels (Array 5byte 0-->4)            +
+ + -YSize : 7  pixcels (Array 1 Byte)                 +
+ +                                                    +
+ +                                                    +
+ +   End  ..OOOOO.. <- bit7       (y)                 +
+ +    ^   ..OOOOO.. <- bit6        ^                  +
+ +    |   ..OOOOO.. <- bit5        |                  +
+ +    |   ..OOOOO.. <- bit4        |                  +
+ +    |   ..OOOOO.. <- bit3        |                  +
+ +    |   ..OOOOO.. <- bit2        |                  +
+ + Start  ..OOOOO.. <- bit1       +----->(x)          +                 
+ *        ..OOOOO.. <- bit0  (Blank,Not Use)          +
+ *                                                    +   
+ *  Byte0-----------> Byte4                           +
+ *                                                    +
+ *     (O = 1 Byte Array  in Table)                   +
+ *     (1 Charecter = 5 byte)                         +
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 const font_5x7  = [                 //array [R=94]x[C=5]
         [0x00,0x00,0x00,0x00,0x00], //     
