@@ -1,4 +1,5 @@
-# ET-DSP I2C LED 16x8 Library
+# Extention ET-DSP I2C LED 16x8 Library
+
 > Open this page at [https://yooyod.github.io/microbit-et-dspi2cled16x8/](https://yooyod.github.io/microbit-et-dspi2cled16x8/)
 
 
